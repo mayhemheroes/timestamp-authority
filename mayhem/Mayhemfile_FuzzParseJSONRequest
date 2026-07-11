@@ -1,0 +1,9 @@
+project: timestamp-authority
+target: FuzzParseJSONRequest
+cmds:
+  - cmd: /mayhem/FuzzParseJSONRequest
+    dictionary: /mayhem/FuzzParseJSONRequest.dict
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/FuzzParseJSONRequest/testsuite
